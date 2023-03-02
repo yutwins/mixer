@@ -1,0 +1,142 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #0A0E10;
+  color: #F2F3EE;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.inner {
+  width: min(100% - 2rem, 1145px);
+  margin-inline: auto;
+}
+
+.btn {
+  display: grid;
+  place-items: center;
+}
+
+.whiteBtn {
+  background-color: #F2F3EE;
+}
+.whiteBtn-text {
+  color: #0A0E10;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.blackBtn {
+  background-color: #0A0E10;
+}
+.blackBtn-text {
+  color: #F2F3EE;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.header {
+  width: 100%;
+}
+.header-inner {
+  width: 100%;
+  height: 100%;
+  padding: 40px 5.1%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header-logoArea {
+  width: 124px;
+  height: 32.4px;
+}
+.header-logoArea__icon {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header-ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+.header-list__item {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.header-list__btn {
+  width: 120px;
+  height: 38px;
+  border-radius: 30px;
+}
+
+/* ========================================================================
+Foundation - ファウンデーション
+======================================================================== */
+/* ========================================================================
+	Layout - レイアウト
+======================================================================== */
+/* ========================================================================
+	Objects - オブジェクト
+======================================================================== */

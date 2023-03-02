@@ -1,3 +1,5 @@
+@use "../foundation/color" as *;
+
 $layout-width-inner: 1080px;
 
 // ブレイクポイント
@@ -14,6 +16,30 @@ $breakpoints: (
 }
 
 .inner {
-    width: min(100% - 2rem, 1200px);
+    width: min(100% - 2rem, 1145px);
     margin-inline: auto;
+}
+
+.btn {
+    display: grid;
+    place-items: center;
+}
+.whiteBtn {
+    background-color: $primary_white;
+
+    &-text {
+        color: $primary_black;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+    }
+}
+
+.blackBtn {
+    background-color: $primary_black;
+    
+    &-text {
+        color: $primary_white;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+    }
 }
