@@ -41,23 +41,30 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- 外部のCSSファイル -->
-    <link rel="stylesheet" href="scss/style.scss">
+
+    <!-- CDN読み込み(slick) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <!-- CDN読み込み(swiper) -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="#" class="header-logoArea"><img width="124" height="32.4px" src="./images/Logo-white.png" alt="会社ロゴ" class="header-logoArea__icon"></a>
+            <a href="#" class="header-logoArea"><img width="124" height="32.4px" src="./images/Logo-white.png"
+                    alt="会社ロゴ" class="header-logoArea__icon"></a>
             <ul class="header-ul">
                 <li class="header-list">
                     <a href="#" class="header-list__item">導入事例</a>
                 </li>
                 <li class="header-list">
-                    <a href="#" class="btn whiteBtn header-list__btn"><span class="whiteBtn-text header-list__btn--text">実績を見る</span></a>
+                    <a href="#" class="btn whiteBtn header-list__btn"><span
+                            class="whiteBtn-text header-list__btn--text">実績を見る</span></a>
                 </li>
             </ul>
         </div>
@@ -65,10 +72,70 @@
     <!-- /.header -->
 
 
-    <section class="FV"></section>
+    <section class="fv">
+        <div class="inner fv-inner">
+            <div class="fv-left">
+                <h1 class="fv-left__title pc-only">
+                    グローバルデザインを<br>
+                    提供する伴走型パートナー
+                </h1>
+                <h1 class="fv-left__title sp-only">
+                    伴走型海外デザインパートナー
+                    <!-- 海外デザイン<br>伴走型パートナー -->
+                </h1>
+            </div>
+            <div class="fv-right">
+                <p class="fv-right__text">まるでグローバルデザイン部署を社内に設置するように、海外のプロデザイナーとスムーズに協働できるサービスです。</p>
+                <a href="#" class="btn blackBtn fv-right__btn">
+                    <span class="blackBtn-text">問い合わせてみる</span>
+                </a>
+            </div>
+        </div>
+        <!-- スライドショー -->
+        <div class="swiper fv-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="swiper-slide__img" src="./images/fv-slider-img01.png" alt="画像1" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-slide__img" src="./images/fv-slider-img02.png" alt="画像2" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-slide__img" src="./images/fv-slider-img03.png" alt="画像3" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-slide__img" src="./images/fv-slider-img04.png" alt="画像4" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-slide__img" src="./images/fv-slider-img05.png" alt="画像5" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-slide__img" src="./images/fv-slider-img06.png" alt="画像6" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-slide__img" src="./images/fv-slider-img07.png" alt="画像7" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-slide__img" src="./images/fv-slider-img08.png" alt="画像8" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-slide__img" src="./images/fv-slider-img09.png" alt="画像9" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-slide__img" src="./images/fv-slider-img10.png" alt="画像10" />
+                </div>
+            </div>
+        </div>
+        <!--/fv-slider--><!-- スライドショーここまで -->
+        <a href="#" class="btn blackBtn fv-right__btn fv-right__btn--spOnly">
+            <span class="blackBtn-text">問い合わせてみる</span>
+        </a>
+    </section>
     <!-- /.FV -->
 
-    <section class="ex"></section>
+    <section class="ex">
+        <div class="inner ex-inner"></div>
+    </section>
     <!-- /.ex -->
 
     <section class="achievement"></section>
@@ -80,6 +147,12 @@
     <section class="contact"></section>
     <!-- /.contact -->
 
+    <!-- jQueryライブラリ読み込みコード -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- CDN読み込み(slick) -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- CDN読み込み(swiper) -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
