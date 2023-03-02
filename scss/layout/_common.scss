@@ -20,6 +20,22 @@ $breakpoints: (
     margin-inline: auto;
 }
 
+.pc-only {
+  display: block;
+  
+  @include mq("sp") {
+    display: none;
+  }
+}
+
+.sp-only {
+    display: none;
+
+    @include mq("sp") {
+        display: block;
+    }
+}
+
 .btn {
     display: grid;
     place-items: center;
@@ -36,6 +52,7 @@ $breakpoints: (
 
 .blackBtn {
     background-color: $primary_black;
+    border: 1px solid $primary_white;
     
     &-text {
         color: $primary_white;
