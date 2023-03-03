@@ -1,0 +1,70 @@
+@use "../foundation/global" as *;
+
+.work {
+
+    &-inner {
+        padding-bottom: 46px;
+
+        @include mq("sp") {
+            padding-bottom: 0;
+        }
+    }
+
+    &-title {
+        text-align: center;
+    }
+
+    &-subtitle {
+        margin-top: 32px;
+        text-align: center;
+    }
+
+    &-ul {
+        width: 855px;
+        max-width: 100%;
+        margin: 50px auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 60px 0;
+
+        @include mq("sp") {
+            width: 350px;
+            gap: 43px 5.7%;
+        }
+    }
+
+    &-list {
+        width: 33%;
+
+        @include mq("sp") {
+            width: 47%;
+        }
+
+        &__icon {
+            width: 40px;
+            height: auto;
+        }
+
+        &__title {
+            font-weight: 600;
+            margin-top: 13px;
+        }
+
+        &__text {
+            max-width: 182px;
+            margin-top: 12px;
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: 500;
+
+            @include mq("sp") {
+                max-width: 100%;
+                margin-top: 14px;
+                font-size: 12px;
+                line-height: 14.5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,155 @@
+@use "../foundation/global" as *;
+
+.contact {
+
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+
+        @include mq("sp") {
+            display: block;
+        }
+    }
+
+    &-left {
+        width: 35%;
+        max-width: 420px;
+
+        @include mq("sp") {
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+        }
+    }
+
+    &-title {
+
+        @include mq("sp") {
+            text-align: center;
+        }
+    }
+
+    &-subtitle {
+        margin-top: 32px;
+
+        @include mq("sp") {
+            margin-top: 24px;
+            text-align: center;
+        }
+    }
+
+    &-right {
+        width: 52.63%;
+        max-width: 600px;
+
+        @include mq("sp") {
+            width: 100%;
+            max-width: 350px;
+            margin: 32px auto 0;
+        }
+    }
+
+    &-form {
+
+        &__dl {
+            display: flex;
+            align-items: center;
+            gap: 9.3%;
+
+            @include mq("sp") {
+                display: block;
+            }
+
+            &:not(:first-child) {
+                margin-top: 42px;
+
+                @include mq("sp") {
+                    margin-top: initial;
+                }
+            }
+        }
+
+        &__row {
+            width: 45.3%;
+
+            @include mq("sp") {
+                width: 100%;
+                margin-top: 24px;
+            }
+        }
+
+        &__label {
+
+        }
+        &__labelText {
+            line-height: 19px;
+            font-weight: 600;
+
+            .require-label {
+                color: $red_color;
+            }
+        }
+
+        &__input {
+            color: $primary_white;
+            
+            input[type="text"],
+            input[type="email"] {
+                width: 100%;
+                margin-top: 8px;
+                padding: 10px;
+                border:1px solid $primary_white;
+                border-radius: 2px;
+                line-height: 1;
+
+                &::placeholder {
+                    color: $gray_color01;
+                    line-height: 1;
+                }
+            }
+        }
+
+        &__textarea {
+            display: block;
+
+            @include mq("sp") {
+                margin-top: 24px !important;
+            }
+
+            textarea {
+                width: 100%;
+                height: 135px;
+                margin-top: 8px;
+                padding: 10px;
+                border:1px solid $primary_white;
+                border-radius: 2px;
+                resize: vertical;
+    
+                &::placeholder {
+                    color: $gray_color01;
+                    line-height: 1;
+                }   
+            }
+        }
+
+        &__submit {
+            width: 160px;
+            height: 51px;
+            border-radius: 100px;
+            overflow: hidden;
+            margin: 42px auto 0;
+            
+            @include mq("sp") {
+                margin: 24px auto 0;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+                height: 100%;
+                background-color: $primary_white;
+                color: $primary_black;
+                font-weight: 600;
+            }
+        }
+    }
+}

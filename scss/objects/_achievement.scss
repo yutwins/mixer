@@ -1,0 +1,86 @@
+@use "../foundation/global" as *;
+
+.achievement {
+
+    @include mq("sp") {
+        display: none;
+    }
+
+    &-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 17px;
+
+        @include mq("sp") {
+            display: block;
+            padding-bottom: 0;
+        }
+    }
+
+    &-left {
+        width: 47.7%;
+
+        @include mq("sp") {
+            width: 100%;
+        }
+    }
+
+    &-title {
+
+        @include mq("sp") {
+            text-align: center;
+        }
+    }
+
+    &-subtitle {
+        margin-top: 32px;
+
+        @include mq("sp") {
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+        }
+    }
+
+    &-btn {
+        width: 175px;
+        height: 51px;
+        margin-top: 56px;
+        border-radius: 30px;
+
+        @include mq("sp") {
+            display: none;
+        }
+
+        &--spOnly {
+            width: 175px;
+            height: 51px;
+            border-radius: 30px;
+            margin: 32px auto 0;
+            display: none;
+
+            @include mq("sp") {
+                display: grid;
+            }
+        }
+
+    }
+
+    &-right {
+        width: 27.7%;
+        max-width: 350px;
+
+        @include mq("sp") {
+            width: 100%;
+            max-width: 300px;
+            margin: 24px auto 0;
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
