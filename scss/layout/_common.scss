@@ -39,9 +39,18 @@ $breakpoints: (
 .btn {
     display: grid;
     place-items: center;
+    transition: all 0.3s ease 0s;
 }
 .whiteBtn {
     background-color: $primary_white;
+
+    &:hover {
+        background-color: $primary_black;
+
+        .whiteBtn-text {
+            color: $primary_white;
+        }
+    }
 
     &-text {
         color: $primary_black;
@@ -53,10 +62,49 @@ $breakpoints: (
 .blackBtn {
     background-color: $primary_black;
     border: 1px solid $primary_white;
+
+    &:hover {
+        background-color: $primary_white;
+        border: none;
+
+        .blackBtn-text {
+            color: $primary_black;
+        }
+    }
     
     &-text {
         color: $primary_white;
         font-weight: 600;
         letter-spacing: 0.04em;
+    }
+}
+
+.section {
+    padding-top: 200px;
+
+    @include mq("sp") {
+        padding-top: 124px;
+    }
+}
+
+.section-title {
+    font-size: 40px;
+    line-height: 62px;
+    font-weight: 600;
+
+    @include mq("sp") {
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+
+.section-subtitle {
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 500;
+
+    @include mq("sp") {
+        font-size: 14px;
+        line-height: 20px;
     }
 }
