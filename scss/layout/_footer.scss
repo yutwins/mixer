@@ -1,0 +1,211 @@
+@use "../foundation/global" as *;
+
+.footer {
+    margin-top: 180px;
+
+    @include mq("sp") {
+        margin-top: 75px;
+    }
+
+    &-inner {
+        border-top: 1px solid $third_black;
+        padding-top: 42px;
+        padding-bottom: 42px;
+        
+        @include mq("sp") {
+            border-top: none;
+            border-bottom: 1px solid $third_black;
+            padding-top: 40px;
+            padding-bottom: 150px;
+        }
+    }
+
+    &-upper {
+        display: flex;
+        justify-content: space-between;
+
+        @include mq("sp") {
+            display: block;
+
+        }
+
+        &__right {
+            padding-top: 13px;
+
+            @include mq("sp") {
+                padding-top: 0;
+            }
+        }
+    }
+
+    &-logoArea {
+        display: block;
+        width: 128px;
+
+        @include mq("sp") {
+            display: none;
+        }
+
+        &__img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+
+    &-ul {
+        margin-top: 46px;
+        display: flex;
+        gap: 17px;
+    }
+
+    &-list {
+        
+        &:not(:first-child) {
+            
+            .footer-list__item {
+                position: relative;
+
+                &::before {
+                    content: "/";
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: -10px;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+        &__item {
+            font-size: 13px;
+            font-weight: 500;
+            display: inline-block;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: $primary-white;
+                transform: scale(0, 1);
+                transform-origin: right top;
+                transition: transform .3s;
+            }
+
+            &:hover {
+             
+                &::after {
+                    transform-origin: left top;
+                    transform: scale(1, 1);
+                }
+            }
+        }
+    }
+
+
+    &-sns {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        @include mq("sp") {
+            margin-top: 24px;
+        }
+
+        &__listItem {
+            display: block;
+
+            &:hover {
+                opacity: .64;
+            }
+        }
+        &__listItem01 {
+            width: 23px;
+
+            @include mq("sp") {
+                width: 28px;
+            }
+        }
+        &__listItem02 {
+            width: 20px;
+            
+            @include mq("sp") {
+                width: 25px;
+            }
+        }
+        &__listIcon {
+            width: 100%;
+        }
+    }
+
+
+    &-copyright {
+        margin-top: 74px;
+        font-size: 13px;
+        letter-spacing: 0.04em;
+
+        @include mq("sp") {
+            margin-top: 52px;
+        }
+    }
+}
+
+
+.cta {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 12px rgb(0 0 0 / 5%);
+    backdrop-filter: blur(10px);
+    transform: translateY(200%);
+    transition: all 0.5s ease 0s;
+    display: none;
+
+    &.is-scrolled {
+        transform: translateY(0%);
+    }
+
+    @include mq("sp") {
+        display: block;
+    }
+
+    &-inner {
+        width: 100%;
+        max-width: 350px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-logo {
+        display: block;
+        width: 105px;
+        height: 28px;
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-btn {
+        width: 164px;
+        height: 41px;
+        border-radius: 42px;
+
+        &__text {
+            font-size: 14px;
+        }        
+    }
+}

@@ -101,10 +101,15 @@
                 border:1px solid $primary_white;
                 border-radius: 2px;
                 line-height: 1;
+                color: $primary-white;
 
                 &::placeholder {
                     color: $gray_color01;
                     line-height: 1;
+
+                    @include mq("sp") {
+                        font-size: 12px;
+                    }
                 }
             }
         }
@@ -124,11 +129,17 @@
                 border:1px solid $primary_white;
                 border-radius: 2px;
                 resize: vertical;
+                color: $primary_white;
     
                 &::placeholder {
                     color: $gray_color01;
-                    line-height: 1;
-                }   
+                    line-height: 1.2;
+                    padding-top: 3px;
+
+                    @include mq("sp") {
+                        font-size: 12px;
+                    }
+                }
             }
         }
 
@@ -142,13 +153,21 @@
             @include mq("sp") {
                 margin: 24px auto 0;
             }
-
+            
             input[type="submit"] {
                 width: 100%;
                 height: 100%;
                 background-color: $primary_white;
                 color: $primary_black;
                 font-weight: 600;
+                border-radius: 100px;
+                transition: all 0.3s ease 0s;
+
+                &:hover {
+                    background-color: $primary_black;
+                    border: 1.4px solid $primary_white;
+                    color: $primary_white;
+                }
             }
         }
     }

@@ -1,0 +1,36 @@
+@use "../foundation/global" as *;
+
+.thanks {
+
+    &-inner {
+        padding-top: 123px;
+        text-align: center;
+
+        @include mq("sp") {
+            padding-top: 64px;
+        }
+    }
+
+    &-head {
+        font-size: 42px;
+
+        @include mq("sp") {
+            font-size: 32px;
+        }
+    }
+
+    &-text {
+        margin-top: 40px;
+
+        @include mq("sp") {
+            margin-top: 24px;
+        }
+    }
+
+    &-btn {
+        width: 163px;
+        height: 55px;
+        border-radius: 30px;
+        margin: 64px auto 0;
+    }
+}

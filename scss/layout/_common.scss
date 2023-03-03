@@ -46,6 +46,7 @@ $breakpoints: (
 
     &:hover {
         background-color: $primary_black;
+        border: 1.4px solid $primary_white;
 
         .whiteBtn-text {
             color: $primary_white;
@@ -61,7 +62,7 @@ $breakpoints: (
 
 .blackBtn {
     background-color: $primary_black;
-    border: 1px solid $primary_white;
+    border: 1.4px solid $primary_white;
 
     &:hover {
         background-color: $primary_white;
