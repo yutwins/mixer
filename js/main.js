@@ -10,7 +10,44 @@ jQuery('.fv-slider').slick({
   cssEase: "linear",      //スライドの動きを等速に
   pauseOnHover: false,    //ホバーしても止まらないように
   pauseOnFocus: false,    //フォーカスしても止まらないように
+  pauseOnDotsHover: false
 });
+jQuery('.fv-slider').on('touchmove', function(event, slick, currentSlide, nextSlide){
+  jQuery('.fv-slider').slick('slickPlay');
+});
+
+
+
+// ボタンクリックで指定した要素までスクロールする関数
+function scrollToElementOnClick(button, el) {
+  button.addEventListener('click', function() {
+    window.scrollTo({
+      behavior: 'smooth',
+      top: el.offsetTop
+    });
+  });
+}
+
+
+const achievementBtn = document.querySelector('.js-achievement__btn');
+const ex = document.querySelector('.ex');
+const exBtn = document.querySelector('.js-ex__btn');
+const freeBtn = document.querySelector('.js-free__btn');
+const estimateBtn = document.querySelector('.js-estimate__btn');
+const contact = document.querySelector('.contact');
+const contactBtn = document.querySelector('.js-contact__btn');
+const contactBtnSp = document.querySelector('.js-contact__btn--sp');
+const ctaBtn = document.querySelector('.js-cta__btn');
+
+scrollToElementOnClick(achievementBtn, contact);
+scrollToElementOnClick(exBtn, ex);
+scrollToElementOnClick(freeBtn, contact);
+scrollToElementOnClick(estimateBtn, contact);
+scrollToElementOnClick(contactBtn, contact);
+scrollToElementOnClick(contactBtnSp, contact);
+scrollToElementOnClick(ctaBtn, contact);
+
+
 
 //スクロールした時にCTA部分をフワッと表示
 const cta = document.querySelector('.cta');
@@ -27,60 +64,32 @@ function addClassScroll(el, className) {
 addClassScroll(cta, 'is-scrolled');
 
 
-//上にスクロールした際にも削除したい場合は↓
-// const isUp = (function() {
-//   const scrollElement = document.scrollingElement;
-//   let flag, prePoint, scrollPoint;
-//   return function() {
-//     scrollPoint = scrollElement.scrollTop;
-//     flag = prePoint > scrollPoint ? true : false;
-//     prePoint = scrollPoint;
-//     return flag;
-//   }
-// }());
+// コンタクトフォーム、全ての必須項目を入力時のみボタンを活性化する
+function validateForm() {
+  // 必須項目のIDを配列で定義
+  const requiredFields = ["your-name", "your-company", "your-email", "your-number", "your-message" ];
 
-// function addClassScroll(el, className) {
-//   window.addEventListener('scroll', function() {
-//     if (this.window.scrollY > 100) {
-//       if (isUp()) {
-//         el.classList.remove(className);
-//       } else {
-//         el.classList.add(className);
-//       }
-//     } else {
-//       el.classList.remove(className);
-//     }
-//   });
-// }
-// addClassScroll(cta, 'is-scrolled');
+  // 必須項目がすべて入力されているかどうかを確認
+  let isValid = true;
+  requiredFields.forEach((field) => {
+    const input = document.getElementById(field);
+    if (input.value.trim() === "") {
+      isValid = false;
+      return;
+    }
+  });
 
+  // 送信ボタンにクラスを付与または削除
+  const submitButton = document.querySelector('#submit-btn');
+  if (isValid) {
+    submitButton.classList.add("enabled");
+  } else {
+    submitButton.classList.remove("enabled");
+  }
+}
 
-// // ターゲットの設定
-// const items = document.querySelectorAll('.js-intersection')
-// // IEのforEach対策
-// const itemsList = Array.prototype.slice.call(items, 0)
-
-// // オプションの設定
-// const intersectptions = {
-//   root: null,
-//   rootMargin: '0px',
-//   threshold: 0
-// }
-
-// const observer = new IntersectionObserver(itemIntersect, intersectptions)
-
-// // ターゲットを監視する
-// itemsList.forEach(item => {
-//   observer.observe(item)
-// })
-
-// // 交差した時の処理
-// function itemIntersect (entries) {
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add('is-active')
-//     } else {
-//       entry.target.classList.remove('is-active')
-//     }
-//   })
-// }
+// フォームの各入力欄に対して、入力された内容が変更された場合にvalidateFormを呼び出すように設定
+const formInputs = document.querySelectorAll("input, textarea");
+formInputs.forEach((input) => {
+  input.addEventListener("input", validateForm);
+});

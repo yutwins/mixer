@@ -13,24 +13,33 @@
     <meta name="format-detection" content="telephone=no">
 
     <!-- ②SEO対策の補助的措置 -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KNZSN98EK5"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-KNZSN98EK5');
+    </script>
     <!-- サイトのタイトル -->
-    <title>mixer</title>
+    <title>mixer | グローバルデザインを提供する伴走型パートナー</title>
     <!-- キーワード -->
     <meta name="keywords" content="">
     <!-- サイトの説明 -->
-    <meta name="description" content="">
+    <meta name="description" content="まるでグローバルデザイン部署を社内に設置するように、海外のプロデザイナーとスムーズに協働できるスタートアップ向けのデザインサービスです。">
     <!-- 重複するURLを一本化 -->
     <link rel="canonical" href="">
 
     <!-- ③SNS対策 -->
-    <meta property="og:site_name" content="">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
+    <meta property="og:site_name" content="mixer株式会社">
+    <meta property="og:title" content="mixer | グローバルデザインを提供する伴走型パートナー">
+    <meta property="og:description" content="まるでグローバルデザイン部署を社内に設置するように、海外のプロデザイナーとスムーズに協働できるスタートアップ向けのデザインサービスです。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="urlが入ります">
-    <meta property="fb:app_id" content="AppID">
-    <meta property="og:image" content="">
-    <meta name="twitter:card" content="Summary Card">
+    <meta property="og:image" content="https://yutopro.com/mixer_test/dev/wp-content/uploads/2023/03/OGP-FB.png">
+    <meta property="og:image" content="https://yutopro.com/mixer_test/dev/wp-content/uploads/2023/03/OGP-FB.png">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="">
 
     <!-- ④その他の指定 -->
@@ -41,8 +50,7 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <?php wp_head(); ?>
 </head>
@@ -54,10 +62,10 @@
                     alt="会社ロゴ" class="header-logoArea__icon"></a>
             <ul class="header-ul">
                 <li class="header-list">
-                    <a href="#" class="header-list__item">導入事例</a>
+                    <a class="header-list__item js-ex__btn">導入事例</a>
                 </li>
                 <li class="header-list">
-                    <a href="#" class="btn whiteBtn header-list__btn"><span
+                    <a class="btn whiteBtn header-list__btn js-achievement__btn"><span
                             class="whiteBtn-text header-list__btn--text">実績を見る</span></a>
                 </li>
             </ul>

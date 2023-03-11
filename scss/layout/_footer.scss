@@ -147,6 +147,7 @@
         margin-top: 74px;
         font-size: 13px;
         letter-spacing: 0.04em;
+        font-family: $secondary-font;
 
         @include mq("sp") {
             margin-top: 52px;
@@ -178,7 +179,6 @@
 
     &-inner {
         width: 100%;
-        max-width: 350px;
         height: 100%;
         margin: 0 auto;
         padding: 0 20px;

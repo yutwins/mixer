@@ -34,9 +34,9 @@
     <div class="cta">
         <div class="cta-inner">
             <a href="<?php echo esc_url(home_url( '/' )); ?>" class="cta-logo">
-                <img src="<?php echo get_template_directory_uri() ?>/images/Logo-white.png" alt="会社ロゴ" class="cta-logo__img">
+                <img width="128" height="34" src="<?php echo get_template_directory_uri() ?>/images/Logo-white.png" alt="会社ロゴ" class="cta-logo__img">
             </a>
-            <a href="#" class="btn whiteBtn cta-btn">
+            <a class="btn whiteBtn cta-btn js-cta__btn">
                 <span class="whiteBtn-text cta-btn__text">問い合わせてみる</span>
             </a>
         </div>

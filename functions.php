@@ -55,7 +55,8 @@ function my_script_init()
 
     // wp_enqueue_script('js-slick', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '1.0.0', true);
 
-    // js
+    
+    // main.js
     wp_enqueue_script('', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '1.0.0', true);
 }
     add_action('wp_enqueue_scripts', 'my_script_init');
