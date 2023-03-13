@@ -1,0 +1,187 @@
+@use "../foundation/global" as *;
+
+.single {
+    
+    &-inner {
+        padding-top: 72px;
+        max-width: 1075px;
+        margin: 0 auto;
+
+        @include mq("sp") {
+            padding-top: 16px;
+        }
+    }
+
+    &-top {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        @include mq("sp") {
+            display: block;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        &__textArea {
+            width: 45%;
+            max-width: 480px;
+
+            @include mq("tab") {
+                width: 48%;
+            }
+            @include mq("sp") {
+                width: 100%;
+            }
+        }
+
+        &__company {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+
+            @include mq("sp") {
+                font-size: 16px;
+            }
+        }
+
+        &__titleArea {
+            margin-top: 28px;
+        }
+        &__doubleQuotation {
+            width: 18px;
+            height: auto;
+        }
+        &__title {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 0.04em;
+
+            @include mq("sp") {
+                font-size: 20px;
+            }
+        }
+        
+        &__nameArea {
+            margin-top: 60px;
+            color: $gray_color02;
+            letter-spacing: 0.04em;
+
+            @include mq("sp") {
+                margin-top: 40px;
+            }
+        }
+        &__occupation {
+            font-size: 12px;
+        }
+        &__name {
+            font-size: 14px;
+        }
+
+        &__text {
+            margin-top: 7px;
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 500;
+        }
+
+        &__imgArea {
+            width: 46.9%;
+            max-width: 504px;
+            height: 380px;
+            margin-bottom: 0;
+
+            @include mq("tab") {
+                width: 48%;
+            }
+            @include mq("sp") {
+                width: 100%;
+                height: 254px;
+                margin-top: 40px;
+            }
+        }
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: left;
+
+            @include mq("tab") {
+                height: auto;
+            }
+        }
+    }
+
+
+    &-bottom {
+        margin-top: 72px;
+        padding: 44px 88px;
+        background-color: $sub_black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mq("tab") {
+            padding: 32px;
+        }
+
+        @include mq("sp") {
+            margin-top: 44px;
+            padding: 24px;
+            display: block;
+        }
+
+        &__logoArea {
+            background-color: $primary-white;
+            width: 176px;
+            height: 176px;
+            display: grid;
+            place-items: center;
+            border-radius: 2px;
+
+            @include mq("sp") {
+                width: 144px;
+                height: 144px;
+                margin: 0 auto;
+            }
+        }
+        &__logo {
+            width: auto;
+            height: 27px;
+        }
+
+        &__textArea {
+            width: 70%;
+
+            @include mq("sp") {
+                width: 100%;
+                margin-top: 32px;
+            }
+        }
+        &__companyName {
+            font-weight: bold;
+        }
+        &__companyDesc {
+            margin-top: 15px;
+            font-size: 14px;
+            line-height: 1.4;
+            font-weight: 400;
+
+            @include mq("sp") {
+                font-size: 13px;
+                margin-top: 12px;
+            }
+        }
+        &__link {
+            margin-top: 15px;
+            color: $gray_color03;
+            font-size: 14px;
+
+            @include mq("sp") {
+                font-size: 13px;
+                margin-top: 12px;
+            }
+        }
+    }
+
+}

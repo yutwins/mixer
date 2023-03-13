@@ -1,0 +1,255 @@
+@use "./foundation/global" as *;
+
+.single {
+
+    &-inner {
+
+        @include mq("sp") {
+            padding-bottom: 16px;
+        }
+    }
+
+    &-container {
+        padding-top: 72px;
+        padding-bottom: 56px;
+    }
+
+    &-steps {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 30px 24px 0;
+        background-color: $sub_black;
+        overflow: hidden;
+
+        @include mq("tab") {
+            padding: 24px 18px;
+        }
+        @include mq("sp") {
+            display: block;
+            max-width: 336px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        // &::before {
+        //     content: "";
+        //     display: block;
+        //     width: 100%;
+        //     height: 100%;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+
+        //     @include mq("sp") {
+        //         background: url(../images/Subtract-sp.png) no-repeat center center / cover;
+        //     }
+        // }
+    }
+
+    &-step {
+        width: 26.8%;
+        height: auto;
+        min-height: 250px;
+        position: relative;
+        z-index: 2;
+        // padding: 30px 0;
+
+        &:not(:first-child) {
+
+            &::before {
+                content: "";
+                display: block;
+                width: 83px;
+                height: 130%;
+                position: absolute;
+                top: 50%;
+                left: -110px;
+                transform: translateY(-50%);
+                background: url(../images/single-steps-bgArrow.png) no-repeat center center / cover;
+            }
+        }
+        
+        @include mq("tab") {
+            
+            &:not(:first-child) {
+
+                &::before {
+                    left: -96px;
+                }
+            }
+        }
+        
+        @include mq("sp") {
+            width: 100%;
+            min-height: initial;
+            padding: 0;
+            
+            &:not(:first-child) {
+                margin-top: 88px;
+                
+                &::before {
+                    width: 355px;
+                    height: 42px;
+                    top: -65px;
+                    left: 50%;
+                    transform: translate(-50%, 0%);
+                    background: url(../images/single-steps-bgArrow-sp.png) no-repeat center center / cover;
+                }
+            }
+        }
+
+        &__head {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.04em;
+
+            @include mq("sp") {
+                font-size: 13px;
+            }
+        }
+
+        &__ul {
+            margin-top: 14px;
+        }
+
+        &__list {
+            font-size: 14px;
+            line-height: 22px;
+            padding-left: 10px;
+            position: relative;
+
+            @include mq("sp") {
+                font-size: 13px;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                width: 4px;
+                height: 4px;
+                position: absolute;
+                top: 10px;
+                left: 0;
+                background-color: $primary-white;
+                transform: rotate(45deg);
+            }
+
+            &:not(:first-child) {
+                margin-top: 15px;
+
+                @include mq("sp") {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    &-wrapper {
+        margin-top: 96px;
+
+        @include mq("sp") {
+            margin-top: 72px;
+        }
+    }
+
+    &-wrap {
+
+        &:not(:first-child) {
+            margin-top: 156px;
+
+            @include mq("sp") {
+                margin-top: 92px;
+            }
+        }
+
+        &__title {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 0.04em;
+
+            @include mq("sp") {
+                font-size: 20px;
+            }
+        }
+
+        &__img {
+            width: 656px;
+            max-width: 100%;
+            display: block;
+            margin: 32px auto 0;
+        }
+        &__imgTitle {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+
+    &-qa {
+        margin-top: 80px;
+
+        &:nth-of-type(1) {
+            margin-top: 48px;
+
+            @include mq("sp") {
+                margin-top: 32px;
+            }
+        }
+
+        &__q {
+            padding-left: 52px;
+            color: $gray_color04;
+            position: relative;
+            font-weight: bold;
+            margin-bottom: 24px;
+
+            @include mq("sp") {
+                padding-left: 0;
+                font-size: 14px;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                width: 40px;
+                height: 1px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                background-color: $gray_color04;
+
+                @include mq("sp") {
+                    width: 30px;
+                    top: 12px;
+                }
+            }
+        }
+
+        &__space {
+            display: none;
+
+            @include mq("sp") {
+                display: inline-block;
+            }
+        }
+
+        &__a {
+            letter-spacing: 0.04em;
+            margin-top: 20px;
+
+            @include mq("sp") {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.footer {
+
+    @include mq("sp") {
+        margin-top: 0;
+    }
+}

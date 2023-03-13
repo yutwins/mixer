@@ -15,14 +15,14 @@
     }
 
     &-subtitle {
-        margin-top: 32px;
+        margin-top: 20px;
         text-align: center;
     }
 
     &-ul {
         width: 855px;
         max-width: 100%;
-        margin: 50px auto 0;
+        margin: 72px auto 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -45,12 +45,18 @@
 
         &__container {
             margin: 0 auto;
-            max-width: 191px;
+            max-width: 190px;
         }
 
         &__icon {
-            width: 40px;
+            width: 72px;
             height: auto;
+        }
+        &__icon02 {
+            width: 78px;
+        }
+        &__icon04 {
+            width: 83px;
         }
 
         &__title {
@@ -71,7 +77,6 @@
                 max-width: 100%;
                 margin-top: 14px;
                 font-size: 12px;
-                line-height: 14.5px;
             }
         }
     }

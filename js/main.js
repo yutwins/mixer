@@ -16,39 +16,35 @@ jQuery('.fv-slider').on('touchmove', function(event, slick, currentSlide, nextSl
   jQuery('.fv-slider').slick('slickPlay');
 });
 
-
-
 // ボタンクリックで指定した要素までスクロールする関数
-function scrollToElementOnClick(button, el) {
-  button.addEventListener('click', function() {
-    window.scrollTo({
-      behavior: 'smooth',
-      top: el.offsetTop
-    });
-  });
-}
-
-
-const achievementBtn = document.querySelector('.js-achievement__btn');
-const ex = document.querySelector('.ex');
-const exBtn = document.querySelector('.js-ex__btn');
-const freeBtn = document.querySelector('.js-free__btn');
-const estimateBtn = document.querySelector('.js-estimate__btn');
-const contact = document.querySelector('.contact');
-const contactBtn = document.querySelector('.js-contact__btn');
-const contactBtnSp = document.querySelector('.js-contact__btn--sp');
-const ctaBtn = document.querySelector('.js-cta__btn');
-
-scrollToElementOnClick(achievementBtn, contact);
-scrollToElementOnClick(exBtn, ex);
-scrollToElementOnClick(freeBtn, contact);
-scrollToElementOnClick(estimateBtn, contact);
-scrollToElementOnClick(contactBtn, contact);
-scrollToElementOnClick(contactBtnSp, contact);
-scrollToElementOnClick(ctaBtn, contact);
-
-
-
+if ( window.document.body.id === 'top' ) {
+  const scrollToElementOnClick = function(button, el) {
+      button.addEventListener('click', function() {
+        window.scrollTo({
+          behavior: 'smooth',
+          top: el.offsetTop
+        });
+      });
+    };
+    
+    const contact = document.querySelector('.contact');
+    const achievementBtn = document.querySelector('.js-achievement__btn');
+    const exBtn = document.querySelector('.js-ex__btn');
+    const freeBtn = document.querySelector('.js-free__btn');
+    const estimateBtn = document.querySelector('.js-estimate__btn');
+    const contactBtn = document.querySelector('.js-contact__btn');
+    const contactBtnSp = document.querySelector('.js-contact__btn--sp');
+    const ctaBtn = document.querySelector('.js-cta__btn');
+  
+    scrollToElementOnClick(achievementBtn, contact);
+    scrollToElementOnClick(exBtn, contact);
+    scrollToElementOnClick(freeBtn, contact);
+    scrollToElementOnClick(estimateBtn, contact);
+    scrollToElementOnClick(exBtn, contact);
+    scrollToElementOnClick(contactBtn, contact);
+    scrollToElementOnClick(contactBtnSp, contact);
+    scrollToElementOnClick(ctaBtn, contact);
+} 
 //スクロールした時にCTA部分をフワッと表示
 const cta = document.querySelector('.cta');
 

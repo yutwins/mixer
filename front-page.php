@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<div id="front-page">
     <section class="fv">
         <div class="inner fv-inner">
             <div class="fv-left">
@@ -57,7 +58,7 @@
     </section>
     <!-- /.FV -->
 
-    <section class="section ex" aria-labelledby="id">
+    <section id="ex" class="section ex" aria-labelledby="id">
         <div class="inner ex-inner">
             <h2 id="ex-title" class="section-title ex-title">世界を舞台とするスタート<br class="sp-only">アップが利用しています</h2>
             <div class="ex-items">
@@ -127,42 +128,42 @@
             <ul class="work-ul">
                 <li class="work-list">
                     <div class="work-list__container">
-                        <img width="40" height="40" src="<?php echo get_template_directory_uri() ?>/images/work-icon01.png" alt="アイコン" class="work-list__icon">
+                        <img width="72" height="72" src="<?php echo get_template_directory_uri() ?>/images/work-icon01.png" alt="アイコン" class="work-list__icon work-list__icon01">
                         <p class="work-list__title">ソフトウェア</p>
                         <p class="work-list__text">プロダクトの深層から表層まで包括する本質的なUI/UXのデザイン</p>
                     </div>
                 </li>
                 <li class="work-list">
                     <div class="work-list__container">
-                        <img width="40" height="40" src="<?php echo get_template_directory_uri() ?>/images/work-icon02.png" alt="アイコン" class="work-list__icon">
+                        <img width="40" height="40" src="<?php echo get_template_directory_uri() ?>/images/work-icon02.png" alt="アイコン" class="work-list__icon work-list__icon02">
                         <p class="work-list__title">Webサイト</p>
                         <p class="work-list__text">トレンドを取り入れたビジュアルと目的の達成を実現する各種Webサイトのデザイン</p>
                     </div>
                 </li>
                 <li class="work-list">
                     <div class="work-list__container">
-                        <img width="40" height="40" src="<?php echo get_template_directory_uri() ?>/images/work-icon03.png" alt="アイコン" class="work-list__icon">
+                        <img width="40" height="40" src="<?php echo get_template_directory_uri() ?>/images/work-icon03.png" alt="アイコン" class="work-list__icon work-list__icon03">
                         <p class="work-list__title">イラストレーション</p>
                         <p class="work-list__text">グローバルスタンダードに準拠したあらゆるテイストのイラスト制作</p>
                     </div>
                 </li>
                 <li class="work-list">
                     <div class="work-list__container">
-                        <img width="40" height="40" src="<?php echo get_template_directory_uri() ?>/images/work-icon04.png" alt="アイコン" class="work-list__icon">
+                        <img width="40" height="40" src="<?php echo get_template_directory_uri() ?>/images/work-icon04.png" alt="アイコン" class="work-list__icon work-list__icon04">
                         <p class="work-list__title">ロゴ</p>
                         <p class="work-list__text">会社やサービスの根底にある強い想いや考えをビジュアライズするロゴデザイン</p>
                     </div>
                 </li>
                 <li class="work-list">
                     <div class="work-list__container">
-                        <img width="40" height="40" src="<?php echo get_template_directory_uri() ?>/images/work-icon05.png" alt="アイコン" class="work-list__icon">
+                        <img width="40" height="40" src="<?php echo get_template_directory_uri() ?>/images/work-icon05.png" alt="アイコン" class="work-list__icon work-list__icon05">
                         <p class="work-list__title">バナー</p>
                         <p class="work-list__text">広告クリエイティブ、サムネイルなど、目的に沿った効果的なバナーデザイン</p>
                     </div>
                 </li>
                 <li class="work-list">
                     <div class="work-list__container">
-                        <img width="40" height="40" src="<?php echo get_template_directory_uri() ?>/images/work-icon06.png" alt="アイコン" class="work-list__icon">
+                        <img width="40" height="40" src="<?php echo get_template_directory_uri() ?>/images/work-icon06.png" alt="アイコン" class="work-list__icon work-list__icon06">
                         <p class="work-list__title">ドキュメント</p>
                         <p class="work-list__text">ホワイトペーパー、セールス資料などの効果的な情報設計とビジュアルの制作</p>
                     </div>
@@ -191,17 +192,18 @@
                 </a>
             </div>
         </div>
-        <!-- スマホ実績スライダー部分 -->
         <div class="about-slider">
-            <picture>
-                <source srcset="<?php echo get_template_directory_uri() ?>/images/about-img.png" media="(min-width: 768px)">
-                <img src="<?php echo get_template_directory_uri() ?>/images/about-img-sp.png" alt="スマホ実績画像" class="about-slider__img">
-            </picture>
+            <ul class="about-slider__ul">
+                <li class="about-slider__list"></li>
+                <li class="about-slider__list"></li>
+                <li class="about-slider__list"></li>
+                <li class="about-slider__list"></li>
+            </ul>
         </div>
     </section>
     <!-- /.about -->
 
-    <section class="section contact" aria-labelledby="id">
+    <section id="contact" class="section contact" aria-labelledby="id">
         <div class="inner contact-inner">
             <div class="contact-left">
                 <h2 id="contact-title" class="section-title contact-title">お問い合わせ</h2>
@@ -252,4 +254,5 @@
         </div>
     </section>
     <!-- /.contact -->
+</div>
 <?php get_footer(); ?>

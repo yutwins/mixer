@@ -15,9 +15,14 @@ $breakpoints: (
     }
 }
 
+
 .inner {
     width: min(100% - 2rem, 1145px);
     margin-inline: auto;
+    
+    @include mq("sp") {
+        width: min(100% - 2rem, 1145px);
+    }
 }
 
 .pc-only {
@@ -102,7 +107,7 @@ $breakpoints: (
 .section-subtitle {
     font-size: 18px;
     line-height: 36px;
-    font-weight: 500;
+    font-weight: 400;
 
     @include mq("sp") {
         font-size: 14px;
