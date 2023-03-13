@@ -179,6 +179,10 @@
             max-width: 100%;
             display: block;
             margin: 32px auto 0;
+
+            & > img {
+                border-radius: 4px;
+            }
         }
         &__imgTitle {
             margin-top: 10px;

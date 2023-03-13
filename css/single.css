@@ -309,6 +309,9 @@ p {
   display: block;
   margin: 32px auto 0;
 }
+.single-wrap__img > img {
+  border-radius: 4px;
+}
 .single-wrap__imgTitle {
   margin-top: 10px;
   text-align: center;
