@@ -1,23 +1,7 @@
 "use strict";
-
-// スライドショーの実装
-jQuery('.fv-slider').slick({
-  arrows: false,          //左右の矢印はなし
-  autoplay: true,         //自動再生
-  autoplaySpeed: 0,       //自動再生のスピード
-  speed: 3000,            //スライドスピード
-  slidesToShow: 3,        //スライドの表示枚数
-  cssEase: "linear",      //スライドの動きを等速に
-  pauseOnHover: false,    //ホバーしても止まらないように
-  pauseOnFocus: false,    //フォーカスしても止まらないように
-  pauseOnDotsHover: false
-});
-jQuery('.fv-slider').on('touchmove', function(event, slick, currentSlide, nextSlide){
-  jQuery('.fv-slider').slick('slickPlay');
-});
-
 // ボタンクリックで指定した要素までスクロールする関数
 if ( window.document.body.id === 'top' ) {
+  // トップページのみに適応
   const scrollToElementOnClick = function(button, el) {
       button.addEventListener('click', function() {
         window.scrollTo({
@@ -46,18 +30,36 @@ if ( window.document.body.id === 'top' ) {
     scrollToElementOnClick(ctaBtn, contact);
 } 
 //スクロールした時にCTA部分をフワッと表示
-const cta = document.querySelector('.cta');
-
-function addClassScroll(el, className) {
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 100) {
-      el.classList.add(className);
-    } else {
-      el.classList.remove(className);
+(function() {
+  const cta = document.querySelector('.cta');
+  const isUp = (function() {
+    const scrollElement = document.scrollingElement;
+    let flag, prePoint, scrollPoint;
+    return function() {
+      scrollPoint = scrollElement.scrollTop;
+      flag = prePoint > scrollPoint ? true : false;
+      prePoint = scrollPoint;
+      return flag;
     }
-  });
-}
-addClassScroll(cta, 'is-scrolled');
+  }());
+  
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+      if (isUp()) {
+        cta.classList.remove('is-scrolled');
+      } else {
+        cta.classList.add('is-scrolled')
+      }
+    } else {
+      cta.classList.remove('is-scrolled');
+    }
+    
+    if (window.pageYOffset + window.innerHeight >= document.documentElement.scrollHeight) {
+      cta.classList.add('is-scrolled');
+    }
+  })
+}());
+
 
 
 // コンタクトフォーム、全ての必須項目を入力時のみボタンを活性化する

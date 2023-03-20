@@ -85,26 +85,26 @@
             transform: rotate(26deg);
             
             &:nth-of-type(1) {
-                background: url(../images/slide-images01.png) repeat-y 48%;
+                background: url(../images/slide-image01.png) repeat-y 48%;
                 background-position: center top;
                 background-size: 100% auto;
-                animation: infiniteSlide01 9s linear 1s infinite alternate;
+                animation: infiniteSlide01 27s linear 1s infinite alternate;
             }
             &:nth-of-type(2) {
-                background: url(../images/slide-images02.png) repeat-y 48%;
+                background: url(../images/slide-image02.png) repeat-y 48%;
                 background-size: 100% auto;
-                animation: infiniteSlide02 16s linear 1s infinite alternate;
+                animation: infiniteSlide02 48s linear 1s infinite alternate;
             }
             &:nth-of-type(3) {
-                background: url(../images/slide-images03.png) repeat-y 48%;
+                background: url(../images/slide-image03.png) repeat-y 48%;
                 background-size: 100% auto;
-                animation: infiniteSlide03 9s linear 1s infinite alternate;
+                animation: infiniteSlide03 27s linear 1s infinite alternate;
                 
             }
             &:nth-of-type(4) {
-                background: url(../images/slide-images04.png) repeat-y 48%;
+                background: url(../images/slide-image04.png) repeat-y 48%;
                 background-size: 100% auto;
-                animation: infiniteSlide04 16s linear 1s infinite alternate;
+                animation: infiniteSlide04 48s linear 1s infinite alternate;
             }
         }
         &__img {

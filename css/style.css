@@ -569,50 +569,87 @@ p {
     display: grid;
   }
 }
+
+/*
+右から左へ
+----------------------------*/
+@-webkit-keyframes infinity-scroll-left {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@keyframes infinity-scroll-left {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+/*
+IE11対策
+----------------------------*/
+_:-ms-lang(x)::-ms-backdrop,
 .fv-slider {
+  display: -ms-grid;
+  overflow: hidden;
+}
+
+/*----------------------------*/
+.fv-slider__wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
   height: 405px;
   margin-top: 70px;
   pointer-events: none;
 }
 @media (max-width: 767px) {
-  .fv-slider {
+  .fv-slider__wrap {
     height: 205px;
     margin-top: 40px;
   }
 }
-.fv-slider .slick-list {
-  height: 100%;
+
+.fv-slider__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
 }
-.fv-slider .slick-track {
-  height: 100%;
+
+.fv-slider__list--left {
+  -webkit-animation: infinity-scroll-left 25s infinite linear 0.5s both;
+          animation: infinity-scroll-left 25s infinite linear 0.5s both;
 }
-.fv-slider > img {
-  width: 100%; /*スライダー内の画像を横幅100%に*/
-  height: 100%;
-}
-.fv-slider .slick-slide {
-  height: 100% !important; /* 高さを指定 */
-  width: 605px !important;
+
+.fv-slider__item {
+  width: 16.6666666667vw;
+  width: 605px;
   margin: 0 20px;
-  border-radius: 5px;
 }
 @media (max-width: 767px) {
-  .fv-slider .slick-slide {
-    width: 320px !important;
-    margin: 0 8px;
+  .fv-slider__item {
+    width: 320px;
   }
 }
-.fv-slider .slick-slide .fv-slide__img {
-  width: 100%;
+
+.fv-slider__item > img {
   height: 100%;
+  width: 100%;
+  border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 5px;
-}
-.fv-slider .fv-slide {
-  height: 100% !important; /* 高さを指定 */
-  margin: 0 20px;
-  border-radius: 5px;
 }
 
 .ex-inner {
@@ -653,7 +690,6 @@ p {
   height: auto;
   display: block;
   background-color: #131719;
-  pointer-events: none;
 }
 @media (max-width: 767px) {
   .ex-item {
@@ -1009,29 +1045,29 @@ p {
           transform: rotate(26deg);
 }
 .about-slider__list:nth-of-type(1) {
-  background: url(../images/slide-images01.png) repeat-y 48%;
+  background: url(../images/slide-image01.png) repeat-y 48%;
   background-position: center top;
   background-size: 100% auto;
-  -webkit-animation: infiniteSlide01 9s linear 1s infinite alternate;
-          animation: infiniteSlide01 9s linear 1s infinite alternate;
+  -webkit-animation: infiniteSlide01 27s linear 1s infinite alternate;
+          animation: infiniteSlide01 27s linear 1s infinite alternate;
 }
 .about-slider__list:nth-of-type(2) {
-  background: url(../images/slide-images02.png) repeat-y 48%;
+  background: url(../images/slide-image02.png) repeat-y 48%;
   background-size: 100% auto;
-  -webkit-animation: infiniteSlide02 16s linear 1s infinite alternate;
-          animation: infiniteSlide02 16s linear 1s infinite alternate;
+  -webkit-animation: infiniteSlide02 48s linear 1s infinite alternate;
+          animation: infiniteSlide02 48s linear 1s infinite alternate;
 }
 .about-slider__list:nth-of-type(3) {
-  background: url(../images/slide-images03.png) repeat-y 48%;
+  background: url(../images/slide-image03.png) repeat-y 48%;
   background-size: 100% auto;
-  -webkit-animation: infiniteSlide03 9s linear 1s infinite alternate;
-          animation: infiniteSlide03 9s linear 1s infinite alternate;
+  -webkit-animation: infiniteSlide03 27s linear 1s infinite alternate;
+          animation: infiniteSlide03 27s linear 1s infinite alternate;
 }
 .about-slider__list:nth-of-type(4) {
-  background: url(../images/slide-images04.png) repeat-y 48%;
+  background: url(../images/slide-image04.png) repeat-y 48%;
   background-size: 100% auto;
-  -webkit-animation: infiniteSlide04 16s linear 1s infinite alternate;
-          animation: infiniteSlide04 16s linear 1s infinite alternate;
+  -webkit-animation: infiniteSlide04 48s linear 1s infinite alternate;
+          animation: infiniteSlide04 48s linear 1s infinite alternate;
 }
 .about-slider__img {
   width: 100%;

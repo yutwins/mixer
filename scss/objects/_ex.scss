@@ -32,7 +32,6 @@
         height: auto;
         display: block;
         background-color: $sub_black;
-        pointer-events: none;
         
         @include mq("sp") {
             width: 100%;
