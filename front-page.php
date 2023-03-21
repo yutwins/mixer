@@ -31,8 +31,6 @@
                     <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img08.webp" alt></li>
                     <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img09.webp" alt></li>
                     <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img10.webp" alt></li>
-                 </ul>
-                 <ul class="fv-slider__list fv-slider__list--left">
                     <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img01.webp" alt></li>
                     <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img02.webp" alt></li>
                     <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img03.webp" alt></li>
@@ -42,38 +40,47 @@
                     <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img08.webp" alt></li>
                     <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img09.webp" alt></li>
                     <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img10.webp" alt></li>
-                 </ul>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img01.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img02.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img03.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img04.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img06.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img07.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img08.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img09.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img10.webp" alt></li>
+                </ul>
+                <ul class="fv-slider__list fv-slider__list--left">
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img01.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img02.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img03.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img04.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img06.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img07.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img08.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img09.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img10.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img01.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img02.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img03.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img04.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img06.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img07.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img08.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img09.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img10.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img01.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img02.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img03.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img04.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img06.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img07.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img08.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img09.webp" alt></li>
+                    <li class="fv-slider__item"><img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img10.webp" alt></li>
+                </ul>
             </div>
         </div>
-        <!-- <div class="fv-slider">   
-            <div class="fv-slide">
-                <img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img01.webp" class="fv-slide__img">
-            </div>
-            <div class="fv-slide">
-                <img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img02.webp" class="fv-slide__img">
-            </div>
-            <div class="fv-slide">
-                <img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img03.webp" class="fv-slide__img">
-            </div>
-            <div class="fv-slide">
-                <img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img04.webp" class="fv-slide__img">
-            </div>
-            <div class="fv-slide">
-                <img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img06.webp" class="fv-slide__img">
-            </div>
-            <div class="fv-slide">
-                <img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img07.webp" class="fv-slide__img">
-            </div>
-            <div class="fv-slide">
-                <img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img08.webp" class="fv-slide__img">
-            </div>
-            <div class="fv-slide">
-                <img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img09.webp" class="fv-slide__img">
-            </div>
-            <div class="fv-slide">
-                <img src="<?php echo get_template_directory_uri() ?>/images/fv-slider-img10.webp" class="fv-slide__img">
-            </div>
-        </div> -->
         <!--/fv-slider-->
         <a class="btn blackBtn fv-right__btn fv-right__btn--spOnly js-contact__btn--sp">
             <span class="blackBtn-text">問い合わせてみる</span>

@@ -92,18 +92,6 @@
 }
 
 //スライダー部分
-/*
-右から左へ
-----------------------------*/
-@keyframes infinity-scroll-left {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-  
   /*
   IE11対策
   ----------------------------*/
@@ -111,6 +99,7 @@
   .fv-slider {
     display: -ms-grid;
     overflow: hidden;
+    will-change: transform;
   }
   /*----------------------------*/
   
@@ -133,7 +122,9 @@
   }
   
   .fv-slider__list--left{
-  animation :infinity-scroll-left 25s infinite linear 0.5s both;
+    will-change: transform;
+    backface-visibility: hidden;
+    animation :infinity-scroll-left 80s infinite linear 0.5s both;
   }
   
   .fv-slider__item {
@@ -143,6 +134,7 @@
 
     @include mq("sp") {
         width: 320px;
+        margin: 0 8px;
     }
   }
   .fv-slider__item > img{
@@ -150,4 +142,16 @@
      width: 100%;
      border-radius: 5px;
      object-fit: cover;
+  }
+  
+/*
+  右から左へ
+----------------------------*/
+@keyframes infinity-scroll-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
   }

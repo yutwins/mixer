@@ -19,6 +19,8 @@ body {
   line-height: 1.5;
   background-color: #0A0E10;
   color: #F2F3EE;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 img {
@@ -600,6 +602,7 @@ _:-ms-lang(x)::-ms-backdrop,
 .fv-slider {
   display: -ms-grid;
   overflow: hidden;
+  will-change: transform;
 }
 
 /*----------------------------*/
@@ -629,8 +632,9 @@ _:-ms-lang(x)::-ms-backdrop,
 }
 
 .fv-slider__list--left {
-  -webkit-animation: infinity-scroll-left 25s infinite linear 0.5s both;
-          animation: infinity-scroll-left 25s infinite linear 0.5s both;
+  will-change: transform;
+  -webkit-animation: infinity-scroll-left 80s infinite linear 0.5s both;
+          animation: infinity-scroll-left 80s infinite linear 0.5s both;
 }
 
 .fv-slider__item {
@@ -641,6 +645,7 @@ _:-ms-lang(x)::-ms-backdrop,
 @media (max-width: 767px) {
   .fv-slider__item {
     width: 320px;
+    margin: 0 8px;
   }
 }
 

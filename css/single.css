@@ -18,6 +18,8 @@ body {
   line-height: 1.5;
   background-color: #0A0E10;
   color: #F2F3EE;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 img {

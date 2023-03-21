@@ -20,6 +20,8 @@ body {
     line-height: 1.5;
     background-color: $primary_black;
     color: $primary_white;
+    // ページ内のどんなアニメーションにも対応
+    transform: translate3d(0,0,0);
 }
 
 img {
